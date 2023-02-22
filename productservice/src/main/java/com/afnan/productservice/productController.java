@@ -20,14 +20,14 @@ public class productController {
     private IproductRepo repo;
 
     @GetMapping("")
-    public Collection<products> viewAll(){
+    public Collection<products> viewAll() {
         return repo.findAll();
     }
-    
-@PostMapping("")
-public String viewAll(@RequestBody products productss ){
-    repo.save(productss);
-    return "Product Saved";
-}
+
+    @PostMapping("")
+    public String viewAll(@RequestBody products productss) {
+        repo.save(productss);
+        return "Product Saved";
+    }
 
 }
